@@ -185,3 +185,25 @@ render
     button augmenter => lancer la méthode augmenter du parent 
     button diminuer  => lancer la méthode diminuer du parent 
 </div>
+
+
+-----------------------
+
+
+si je voudrais faire 4 compteur A avec des nombre de 12-16 par utilisateur max4 + 
+
+un mode plus dur ohase B avec 4 autre compteur de 14-18 par utilisateur maximum de 14-18 par utilisateur max 4 
+
+plus un mode extrême ou quand les joueur on choisie phase A sa fixe à la valeur de la phase B quand les joueurs atteigne 0.
+
+
+1 joueur 9-16 <=> 48-64 pv
+    contre lui => maximum 4 ennemis
+        A => 12-16
+        B => 14-18 
+
+1 par 1 => force ??? 
+
+Composant 
+    
+    
