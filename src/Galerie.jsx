@@ -41,3 +41,24 @@ class Galerie extends Component {
 }
 
 export default Galerie;
+
+// créer un composant => Compteur
+// state qui a une seule valeur => compte, initialisée à la valeur 0
+/**
+ * state = {
+ *  compte : 0
+ * }
+ *
+ * et au niveau du render
+ *
+ * div
+ *  span chiffre visible de this.state.compte
+ *  bouton augmenter
+ *  bouton diminuer
+ *
+ *  lorsque je clique sur le bouton augmenter => augmenter la valeur de compte dans state de + 1
+ *  lorsque je clique sur le bouton diminuer => diminuer la valeur de compte dans state de - 1
+ *
+ * utiliser bootstrap pour styliser les boutons le chiffre
+ */
+
