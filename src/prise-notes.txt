@@ -140,3 +140,7 @@ this.setState({
 
 // pas habituer à chercher et modifier dans un tableau / objet 
 // => ce que vient de vous écrire n'est pas naturel (même moi j'ai dû le répéter pour l'assimiler .... beaucoup ....)
+
+add (){ // dans le add du parent 
+
+}
