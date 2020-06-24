@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tableau = [1, 2, 3];
+
+        // ??? où est positionner le chiffre 3 dans la variable tableau => 2
+
+        const index = tableau.indexOf(3);
+        console.log(index);
+
+        let jourSemaine = ["lundi", "mardi", "mercredi", "Jeudi"];
+
+        // quel est l'index du mot mardi
+
+        const indexMardi = jourSemaine.indexOf("merdi");
+        // indexOf() méthode qui permet de récupérer l'index d'un élément dans un tableau
+        // si la valeur est trouvé => donner l'index
+        // si la valeur n'est pas trouvée => -1
+        console.log(indexMardi);
+
+        const notes = [
+            { prenom: "Alain", note: 10 },
+            { prenom: "Béatrice", note: 15 },
+            { prenom: "Christian", note: 5 }
+        ];
+
+        // quel est la position dans le tableau notes pour l'élément qui a une valeur de 10 pour sa note
+
+        const result = notes.find(function (item) {
+            return item.note == 15;
+        });
+
+        const indexR = notes.indexOf(result);
+
+        console.log(notes[indexR].prenom);
+
+
+
+    </script>
+</body>
+
+</html>

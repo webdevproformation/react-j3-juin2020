@@ -8,10 +8,16 @@ class Compteur extends Component {
     render() {
         return (
             <div>
-                <span className="badge badge-primary m-2">{this.props.count}</span>
+                <span className="badge badge-primary m-2">{this.props.count.compte}</span>
                 {/** this.state.compte */}
-                <button className="btn btn-success m-2" onClick={this.props.add.bind(this)}>Augmenter</button>
-                <button className="btn btn-warning m-2" onClick={this.props.decrease.bind(this)}>Diminuer</button>
+                <button className="btn btn-success m-2"
+                    onClick={() => { this.props.add(this.props.count) }}>
+                    Augmenter
+                </button>
+                <button className="btn btn-warning m-2"
+                    onClick={() => { this.props.decrease(this.props.count) }}>
+                    Diminuer
+                </button>
             </div>
         )
             ;
@@ -19,3 +25,6 @@ class Compteur extends Component {
 }
 
 export default Compteur;
+// js pur et dur
+// function toto(a){ }
+// document.querySelector(".el").addEventListener("click" , () => {  toto("la valeur ") });

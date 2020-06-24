@@ -5,7 +5,7 @@ import Compteur from "./Compteur";
 class Compteurs extends Component {
     state = {
         compteurs: [
-            { id: 1, compte: 200 },
+            { id: 1, compte: 200 }, // this.props.count.compte == 200 // this.props.count =  { id: 1, compte: 200 }
             { id: 2, compte: -300 },
             { id: 3, compte: -12 },
             { id: 4, compte: 0 },
@@ -13,11 +13,17 @@ class Compteurs extends Component {
         ]
     }
 
-    add() {
-        alert("j'ai cliqué sur add")
+    add(compteur) {
+        const index = this.state.compteurs.indexOf(compteur);
+        const compteurClone = [...this.state.compteurs];
+        compteurClone[index] = { ...objet }; //
+        compteurClone[index].valeur++;
+        //console.log(compteurClone);
+        this.setState({ compteurs: compteurClone });
     }
-    decrease() {
-        alert("j'ai cliqué sur decrease");
+    decrease(compteur) {
+        console.log(compteur);
+        //alert("j'ai cliqué sur decrease");
     }
 
     render() {
@@ -27,7 +33,7 @@ class Compteurs extends Component {
                     item =>
                         <Compteur
                             key={item.id}
-                            count={item.compte}
+                            count={item}
                             add={this.add}
                             decrease={this.decrease}
                         />
