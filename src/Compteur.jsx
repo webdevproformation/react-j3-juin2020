@@ -8,7 +8,9 @@ class Compteur extends Component {
     render() {
         return (
             <div>
-                <span className="badge badge-primary m-2">{this.props.count.compte}</span>
+                <span className="badge badge-primary m-2">
+                    {this.props.count.compte}
+                </span>
                 {/** this.state.compte */}
                 <button className="btn btn-success m-2"
                     onClick={() => { this.props.add(this.props.count) }}>

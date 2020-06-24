@@ -1,0 +1,142 @@
+Créer le projet jour3 dans le dossier react (qui est sur votr bureau)
+create-react-app jour3
+cd jour3
+npm i bootstrap
+npm start
+
+démarrer le serveur => 
+
+-------------------
+
+https://formation.webdevpro.net/react
+login : react
+mdp : react
+
+https://github.com/webdevproformation/react-j2-juin2020
+https://github.com/webdevproformation/react-j3-juin2020
+
+
+Comment insérer une image réalisé soit même dans un composant ?
+
+-----------------
+
+Composant Menu 
+	Logo 
+	lien hypertexte
+
+-----------------
+
+VS Code et le terminal ? powershell et node ??
+
+
+-----------------
+   add = () => {
+        this.setState({
+            rating: this.state.rating >= 29 ? 30 : this.state.rating + 2
+        });
+    }
+
+    decrease() {
+        this.setState({
+            rating: this.state.rating <= -17 ? -20 : this.state.rating - 5
+        });
+    }
+
+-----------------
+
+  const newCompteur = [...this.state.compteurs];
+    const result = newCompteur.find(function (item) {
+        return item.id == compteur.id;
+    });
+    const indexR = newCompteur.indexOf(result);
+    newCompteur[indexR].compte++;
+
+    this.setState({
+        compteurs: newCompteur
+    })
+
+----------------
+hier vu un composant et interactions 
+onClick() => state => render 
+
+----------------
+faire interagir composants entre eux 
+
+Composant Parent (Compteurs)
+Composant enfant (Compteur)
+
+Envoyer des informations stockées dans le state du parent 
+Compteurs  envoyer des données stockées dans le state du compteur vers Compteur
+render du Parent
+<Compteur count={id : 1 , compte : 220 } />
+
+dans le render de l'enfant 
+
+this.props.count.id
+
+-----
+on peut aussi envoyer depuis le parent des méthodes
+
+dans le parent 
+add(){}
+
+<Compteur count={id : 1 , compte : 220 }  add={this.add }/>
+
+dans l'enfant 
+
+onClick={this.props.add}
+// déclencher dans l'enfant une méthode qui est sockée dans le parent 
+
+-----
+
+constructor(){
+
+}
+// hook des composants // cycle de vie du composant
+
+
+-----
+
+=> Parent stocke les données et les méthodes
+=> Enfant lire les données et déclencher les méthodes envoyés depuis parent onClick()
+
+-----
+
+=> augmenter la réutilisabilité des Composants 
+
+
+lorsque je clique sur le 1er compteur 
+modifier la valeur du this.state.compteur[0].compte++
+
+// clone de compteur qui est stocké dans this.state 
+
+[
+    { id: 1, compte: 200 }, 
+    { id: 2, compte: -300 },
+    { id: 3, compte: -12 },
+    { id: 4, compte: 0 },
+    { id: 5, compte: 10 }
+]
+
+const newCompteurs = [...this.state.compteurs];
+
+// où est le premier compteur dans le this.state ????
+
+const resultat = newCompteurs.find(function(item){
+    return item.id = 1 ;
+});
+
+// récupérer l'index 
+const index = newCompteurs.indexof(resultat);
+
+// je peux modifier mon clone
+newCompteurs[index].compte++;
+
+// met à jour mon state 
+
+this.setState({
+    compteurs : newCompteurs
+});
+
+// pas habituer à chercher et modifier dans un tableau / objet 
+// => ce que vient de vous écrire n'est pas naturel (même moi j'ai dû le répéter pour l'assimiler .... beaucoup ....)

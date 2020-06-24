@@ -14,12 +14,7 @@ class Compteurs extends Component {
     }
 
     add(compteur) {
-        const index = this.state.compteurs.indexOf(compteur);
-        const compteurClone = [...this.state.compteurs];
-        compteurClone[index] = { ...objet }; //
-        compteurClone[index].valeur++;
-        //console.log(compteurClone);
-        this.setState({ compteurs: compteurClone });
+        console.log(compteur);
     }
     decrease(compteur) {
         console.log(compteur);
