@@ -29,3 +29,10 @@ class Menu extends Component {
 export default Menu;
 // une fois Menu créé =>
 // vous devez appeler votre composant Menu dans App.js
+
+// cas pratique 
+// composant : Galerie
+// 4 images que vous avez télécharger => stocker dans le dossier public 
+// les images doivent être disposées l'un à côté de l'autre 
+// la galerie sera en dessous du Composant Menu 
+// utiliser le système de grille de bootstrap pour finaliser la mis en forme ! 
