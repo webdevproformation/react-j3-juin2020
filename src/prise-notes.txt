@@ -144,3 +144,44 @@ this.setState({
 add (){ // dans le add du parent 
 
 }
+
+--------------------
+Composant Likes
+state {
+    appreciation : [
+        {id : 1 , valeur : 2},
+        {id : 2 , valeur : 0},
+        {id : 3 , valeur : -5}
+    ]
+}
+deux méthodes 
+augmenter(objet){
+    // clone le tableau appreciation dans state 
+    // rechercher dans ce tableau cloné l'objet 
+    // récupérer l'index
+    // augmenter de + 1 la valeur dans le clone
+    // mettre à jour le state
+}
+diminuer(objet){
+// clone le tableau appreciation dans state 
+    // rechercher dans ce tableau cloné l'objet 
+    // récupérer l'index
+    // diminuer de - 1 la valeur dans le clone
+    // mettre à jour le state
+}
+render 
+    boucle via map des composant enfant Like  sur le tableau this.state.appreciation
+    envoyer la valeur suivante à l'enfant 
+        like={item} 
+        augmenter={this.augmenter.bind(this)}
+        diminuer={this.diminuer.bind(this)}
+
+
+Enfant Like
+
+render 
+<div>
+    <span>{this.props.like.valeur}</span>
+    button augmenter => lancer la méthode augmenter du parent 
+    button diminuer  => lancer la méthode diminuer du parent 
+</div>
