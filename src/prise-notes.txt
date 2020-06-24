@@ -205,5 +205,32 @@ plus un mode extrême ou quand les joueur on choisie phase A sa fixe à la valeu
 1 par 1 => force ??? 
 
 Composant 
-    
+
+
+-----------------
+
+Composant Article 
+
+state {
+    id : 1,
+    titre : "article 1" ,
+    img : "rzrohezohrzo.jpg" , // appeler une image qui est stokée sur le dossier public
+    contenu : "lorem ipsum" ,
+    appreciation : {
+        id : 1,
+        valeur : 10
+    }
+}
+
+/*
+    récupérer les méthodes augmenter + diminuer dans Likes
+*/
+
+render 
+    <article>
+        <h2>titre dans state</h2>
+        <img src="img de state" alt="">
+        <p></p>
+        <Like />
+    <article>
     

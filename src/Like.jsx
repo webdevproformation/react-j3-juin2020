@@ -32,3 +32,5 @@ export default Like;
 // il est possible de créer le composant d'une autre manière
 // cc => Class
 // sfc => Fonction 
+
+
