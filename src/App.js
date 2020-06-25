@@ -5,12 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Compteurs from "./Compteurs";
 import Likes from "./Likes";
 
+import Article from './Article';
+
 function App() {
   return (
     <div className="container">
       <Menu />
       <Compteurs />
       <Likes />
+      <Article />
     </div>
   );
 }

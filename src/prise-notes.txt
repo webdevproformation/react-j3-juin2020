@@ -223,7 +223,7 @@ state {
 }
 
 /*
-    récupérer les méthodes augmenter + diminuer dans Likes
+   créer les méthodes augmenter + diminuer 
 */
 
 render 
@@ -233,4 +233,5 @@ render
         <p></p>
         <Like />
     <article>
-    
+
+
