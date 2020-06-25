@@ -234,4 +234,32 @@ render
         <Like />
     <article>
 
+// Lydia
 
+Composant dans react => 2 parties importantes
+
+state  update du state
+
+render 
+dès que le state est modifié => render est automatiquement mis à jour
+
+si tu faire une mis à jour d'un tableau dans le state Parent
+
+selectectionner l'élément à modifier dans le state parent 
+this.state.appreciation[2].valeur++ ;
+
+clone copie => this.setState() <= LA méthode qu'il faut utiliser pour 
+update le state 
+
+react ne pourrait pas COMPARAISON le avant et après modification
+
+this.setState({
+    appreciation : newAppreciation
+})
+
+(Eviter de faire muter le state )
+
+=> render de mettre à jour tout le composant
+=> mais juste la partie qui a changé
+
+React => https://fr.reactjs.org/
